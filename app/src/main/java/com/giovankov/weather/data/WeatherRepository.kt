@@ -2,7 +2,6 @@ package com.giovankov.weather.data
 
 import com.giovankov.weather.data.model.WeatherModel
 import com.giovankov.weather.data.network.WeatherApiClient
-import com.giovankov.weather.utils.BaseRepository
 import com.giovankov.weather.utils.Resource
 import javax.inject.Inject
 

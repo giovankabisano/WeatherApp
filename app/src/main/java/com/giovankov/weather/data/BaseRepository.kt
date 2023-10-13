@@ -1,5 +1,6 @@
-package com.giovankov.weather.utils
+package com.giovankov.weather.data
 
+import com.giovankov.weather.utils.Resource
 import retrofit2.Response
 
 open class BaseRepository {
