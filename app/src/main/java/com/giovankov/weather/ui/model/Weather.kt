@@ -1,4 +1,4 @@
-package com.giovankov.weather.domain.model
+package com.giovankov.weather.ui.model
 
 import com.giovankov.weather.data.model.WeatherModel
 
@@ -7,4 +7,4 @@ data class Weather(
     val maxTemperature: Double
 )
 
-fun WeatherModel.toDomain() = Weather(main.temp_min, main.temp_max)
+fun WeatherModel.toUIModel() = Weather(main.temp_min, main.temp_max)

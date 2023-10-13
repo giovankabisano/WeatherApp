@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.giovankov.weather.data.model.WeatherModel
 import com.giovankov.weather.domain.GetWeatherUseCase
-import com.giovankov.weather.domain.model.Weather
 import com.giovankov.weather.utils.Resource
 import kotlinx.coroutines.launch
 import javax.inject.Inject

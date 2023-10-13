@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
 
                 }
                 is Resource.Success -> {
-                    binding.text.text = it.data.timezone.toString()
+                    binding.text.text = it.data.main.temp.toString()
                 }
             }
         }

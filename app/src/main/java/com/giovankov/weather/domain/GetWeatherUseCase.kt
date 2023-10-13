@@ -2,7 +2,6 @@ package com.giovankov.weather.domain
 
 import com.giovankov.weather.data.WeatherRepository
 import com.giovankov.weather.data.model.WeatherModel
-import com.giovankov.weather.domain.model.Weather
 import com.giovankov.weather.utils.Resource
 import javax.inject.Inject
 

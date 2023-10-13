@@ -11,7 +11,8 @@ interface WeatherApiClient {
     suspend fun getWeatherData(
         @Query("lat") latitude: Double,
         @Query("lon") longitude: Double,
-        @Query("appid") apiKey: String = BuildConfig.WEATHER_API_KEY
+        @Query("appid") apiKey: String = BuildConfig.WEATHER_API_KEY,
+        @Query("units") units: String = "metric"
     ): Response<WeatherModel>
 
 }
