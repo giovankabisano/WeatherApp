@@ -9,6 +9,11 @@ android {
     namespace = "com.giovankov.weather"
     compileSdk = 34
 
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId = "com.giovankov.weather"
         minSdk = 24
@@ -49,6 +54,10 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
     implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
 //    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
+
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
 
     implementation("com.google.dagger:dagger:2.48")
     kapt("com.google.dagger:dagger-compiler:2.48")
