@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        homeViewModel.onCreate(-6.200000, 106.816666, "1b142054973ab90af1269d2f9fd07067")
+        homeViewModel.onCreate(-6.200000, 106.816666)
         homeViewModel.quoteModel.observe(viewLifecycleOwner) {
             when(it) {
                 is Resource.Error -> {
@@ -50,7 +50,7 @@ class HomeFragment : Fragment() {
 
                 }
                 is Resource.Success -> {
-                    binding.text.text = it.data.name
+                    binding.text.text = it.data.timezone.toString()
                 }
             }
         }

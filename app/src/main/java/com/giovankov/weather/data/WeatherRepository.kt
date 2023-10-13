@@ -12,10 +12,9 @@ class WeatherRepository @Inject constructor(
     suspend fun getWeatherData(
         latitude: Double,
         longitude: Double,
-        apiKey: String
     ): Resource<WeatherModel> {
         return try {
-            val response = service.getWeatherData(latitude, longitude, apiKey)
+            val response = service.getWeatherData(latitude, longitude)
             if (response.isSuccessful) {
                 val data = response.body()
                 if(data != null) {

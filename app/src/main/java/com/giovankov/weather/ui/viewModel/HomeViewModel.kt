@@ -19,12 +19,11 @@ class HomeViewModel @Inject constructor(
 
     fun onCreate(
         latitude: Double,
-        longitude: Double,
-        apiKey: String
+        longitude: Double
     ) {
         viewModelScope.launch {
             isLoading.postValue(true)
-            val result = getWeatherUseCase(latitude, longitude, apiKey)
+            val result = getWeatherUseCase(latitude, longitude)
             quoteModel.postValue(result)
             isLoading.postValue(false)
         }

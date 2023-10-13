@@ -10,6 +10,7 @@ android {
     compileSdk = 34
 
     buildFeatures {
+        buildConfig = true
         dataBinding = true
         viewBinding = true
     }
@@ -33,12 +34,21 @@ android {
             )
         }
     }
+    flavorDimensions += "version"
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    productFlavors {
+        create("staging") {
+            buildConfigField("String", "WEATHER_API_KEY", "\"1b142054973ab90af1269d2f9fd07067\"")
+        }
+        create("prod") {
+            buildConfigField("String", "WEATHER_API_KEY", "\"1b142054973ab90af1269d2f9fd07067\"")
+        }
     }
 }
 
