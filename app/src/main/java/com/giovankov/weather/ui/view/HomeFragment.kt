@@ -54,6 +54,5 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-//        activity?.findViewById<TextView>(R.id.text)?.text = homeViewModel.welcomeText
     }
 }
