@@ -54,15 +54,13 @@ android {
 
 dependencies {
 
-    val navVersion = "2.7.3"
-
-    implementation("androidx.core:core-ktx:1.9.0")
+    implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("com.google.android.material:material:1.9.0")
+    implementation("com.google.android.material:material:1.10.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
-    implementation("androidx.navigation:navigation-fragment-ktx:$navVersion")
-    implementation("androidx.navigation:navigation-ui-ktx:$navVersion")
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.4")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.4")
 //    implementation("androidx.navigation:navigation-dynamic-features-fragment:$navVersion")
 
     // Retrofit
@@ -75,9 +73,14 @@ dependencies {
     implementation("com.google.dagger:dagger:2.48")
     kapt("com.google.dagger:dagger-compiler:2.48")
 
+
+    testImplementation("com.google.truth:truth:1.0.1")
     testImplementation("junit:junit:4.13.2")
+    testImplementation("androidx.test:core:1.5.0")
     testImplementation("org.mockito:mockito-core:3.11.2")
     testImplementation("org.mockito:mockito-inline:3.11.2")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:3.11.2")
+    testImplementation("io.mockk:mockk:1.9.3")
     testImplementation("androidx.arch.core:core-testing:2.2.0")
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
