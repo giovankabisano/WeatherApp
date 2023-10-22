@@ -7,7 +7,7 @@ import javax.inject.Singleton
 
 // Definition of a Dagger component
 @Singleton
-@Component(modules = [NetworkModule::class])
+@Component(modules = [NetworkModule::class, AppModule::class])
 interface AppComponent {
 
     // Factory to create instances of the AppComponent

@@ -7,6 +7,15 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.giovankov.weather.ui.view.HomeFragment"
-        android:label="@string/hello_blank_fragment"
+        tools:layout="@layout/fragment_home" >
+
+        <action
+            android:id="@+id/action_homeFragment_to_askLocationFragment"
+            app:destination="@+id/askLocationFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/askLocationFragment"
+        android:name="com.giovankov.weather.ui.view.AskLocationFragment"
         tools:layout="@layout/fragment_home" />
 </navigation>
